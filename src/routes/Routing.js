@@ -3,29 +3,69 @@ import React, { lazy, Suspense } from "react";
 
 const Main = lazy(() => import("pages/main"));
 const MakeScrollToTop = lazy(() => import("components/MakeScrollToTop"));
+const SignIn = React.lazy(() => import("pages/sign/sign-in"));
+const Signup = React.lazy(() => import("pages/sign/sign-up"));
+const ProductDetailPage = React.lazy(() => import("pages/product-detail"));
+const MarketPrice = React.lazy(() => import("pages/market-price"));
+const ProductRegister = React.lazy(() => import("pages/product-register"));
+const UsedTransaction = React.lazy(() =>
+	import("pages/transaction/used-transaction"),
+);
+const FreeTransaction = React.lazy(() =>
+	import("pages/transaction/free-transaction"),
+);
+const SearchPage = React.lazy(() => import("pages/search-page"));
+const MypageLayout = React.lazy(() =>
+	import("pages/my-page/layout/mypage-layout"),
+);
+const RegisterProduct = React.lazy(() =>
+	import("pages/my-page/components/RegisterProducts"),
+);
+const HouseKeeping = React.lazy(() =>
+	import("pages/my-page/components/HousekeepingBook"),
+);
+const PurchasedItem = React.lazy(() =>
+	import("pages/my-page/components/PurchasedItem"),
+);
+const InterestProduct = React.lazy(() =>
+	import("pages/my-page/components/InterestProduct"),
+);
+const Review = React.lazy(() => import("pages/my-page/components/Review"));
+const Chat = React.lazy(() => import("pages/Chat"));
+const PwChange = React.lazy(() =>
+	import("pages/account-management/components/PwChange"),
+);
+const AccoutLayout = React.lazy(() =>
+	import("pages/account-management/layout/account-layout"),
+);
+const AccountPrivacy = React.lazy(() =>
+	import("pages/account-management/components/ModifyInfo"),
+);
+const ErrorPage = React.lazy(() => import("pages/error-page"));
+const Intro = React.lazy(() => import("pages/Intro"));
 
 // import Main from "pages/main";
 // import MakeScrollToTop from "components/MakeScrollToTop";
-import SignIn from "pages/sign/sign-in";
-import Signup from "pages/sign/sign-up";
-import ProductDetailPage from "pages/product-detail";
-import MarketPrice from "pages/market-price";
-import ProductRegister from "pages/product-register";
-import UsedTransaction from "pages/transaction/used-transaction";
-import FreeTransaction from "pages/transaction/free-transaction";
-import SearchPage from "pages/search-page";
-import MypageLayout from "pages/my-page/layout/mypage-layout";
-import RegisterProduct from "pages/my-page/components/RegisterProducts";
-import HouseKeeping from "pages/my-page/components/HousekeepingBook";
-import PurchasedItem from "pages/my-page/components/PurchasedItem";
-import InterestProduct from "pages/my-page/components/InterestProduct";
-import Review from "pages/my-page/components/Review";
-import Chat from "pages/Chat";
-import PwChange from "pages/account-management/components/PwChange";
-import AccoutLayout from "pages/account-management/layout/account-layout";
-import AccountPrivacy from "pages/account-management/components/ModifyInfo";
-import ErrorPage from "pages/error-page";
-import Intro from "pages/Intro";
+// import SignIn from "pages/sign/sign-in";
+// import Signup from "pages/sign/sign-up";
+// import ProductDetailPage from "pages/product-detail";
+// import MarketPrice from "pages/market-price";
+// import ProductRegister from "pages/product-register";
+// import UsedTransaction from "pages/transaction/used-transaction";
+// import FreeTransaction from "pages/transaction/free-transaction";
+// import SearchPage from "pages/search-page";
+// import MypageLayout from "pages/my-page/layout/mypage-layout";
+// import RegisterProduct from "pages/my-page/components/RegisterProducts";
+// import HouseKeeping from "pages/my-page/components/HousekeepingBook";
+// import PurchasedItem from "pages/my-page/components/PurchasedItem";
+// import InterestProduct from "pages/my-page/components/InterestProduct";
+// import Review from "pages/my-page/components/Review";
+// import Chat from "pages/Chat";
+// import PwChange from "pages/account-management/components/PwChange";
+// import AccoutLayout from "pages/account-management/layout/account-layout";
+// import AccountPrivacy from "pages/account-management/components/ModifyInfo";
+// import ErrorPage from "pages/error-page";
+// import Intro from "pages/Intro";
 import PrivateRouter from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -42,11 +82,7 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: (
-					<Suspense fallback={<div>Loading...</div>}>
-						<Main />
-					</Suspense>
-				),
+				element: <Main />,
 			},
 			{
 				path: "/account",
