@@ -1,6 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "pages/main";
-import MakeScrollToTop from "components/MakeScrollToTop";
+import React, { lazy, Suspense } from "react";
+
+const Main = lazy(() => import("pages/main"));
+const MakeScrollToTop = lazy(() => import("components/MakeScrollToTop"));
+
+// import Main from "pages/main";
+// import MakeScrollToTop from "components/MakeScrollToTop";
 import SignIn from "pages/sign/sign-in";
 import Signup from "pages/sign/sign-up";
 import ProductDetailPage from "pages/product-detail";
@@ -26,16 +31,22 @@ import PrivateRouter from "./PrivateRoute";
 const router = createBrowserRouter([
 	{
 		element: (
-			<>
-				<PrivateRouter>
-					<MakeScrollToTop />
-				</PrivateRouter>
-			</>
+			<Suspense fallback={<div>Loading...</div>}>
+				<>
+					<PrivateRouter>
+						<MakeScrollToTop />
+					</PrivateRouter>
+				</>
+			</Suspense>
 		),
 		children: [
 			{
 				path: "/",
-				element: <Main />,
+				element: (
+					<Suspense fallback={<div>Loading...</div>}>
+						<Main />
+					</Suspense>
+				),
 			},
 			{
 				path: "/account",
