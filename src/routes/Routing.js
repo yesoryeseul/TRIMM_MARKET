@@ -26,11 +26,13 @@ import PrivateRouter from "./PrivateRoute";
 const router = createBrowserRouter([
 	{
 		element: (
-			<>
-				<PrivateRouter>
-					<MakeScrollToTop />
-				</PrivateRouter>
-			</>
+			<Suspense fallback={<div>Loading...</div>}>
+				<>
+					<PrivateRouter>
+						<MakeScrollToTop />
+					</PrivateRouter>
+				</>
+			</Suspense>
 		),
 		children: [
 			{
