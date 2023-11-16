@@ -3,6 +3,7 @@ import { flexCenter } from "styles/common";
 import { AiFillCamera } from "react-icons/ai";
 import { useRef } from "react";
 import { TiDelete } from "react-icons/ti";
+import imageCompression from "browser-image-compression";
 const Images = ({
 	imageArr,
 	setImageArr,
@@ -19,10 +20,26 @@ const Images = ({
 		const updatedImages = [...imageArr];
 		const updatedDBImages = [...imageDBArr];
 
+		const options = {
+			maxSizeMB: 1,
+			maxWidthOrHeight: 1920,
+			useWebWorker: true,
+		};
+
 		for (let i = 0; i < files.length; i++) {
 			const file = files[i];
-			updatedImages.push(URL.createObjectURL(file)); // 미리보기
-			updatedDBImages.push(file); // DB용
+			// updatedImages.push(URL.createObjectURL(file)); // 미리보기
+			// updatedDBImages.push(file); // DB용
+			// console.log("이미지 압축 저장 전", file);
+
+			try {
+				const compressedFile = await imageCompression(file, options);
+				await updatedImages.push(URL.createObjectURL(compressedFile)); // 미리보기
+				await updatedDBImages.push(compressedFile); // DB용
+				console.log("이미지 압축 저장 후", compressedFile);
+			} catch (error) {
+				console.log(error);
+			}
 		}
 		setImageArr(updatedImages.slice(0, 5));
 		setImageDBArr(updatedDBImages.slice(0, 5));
