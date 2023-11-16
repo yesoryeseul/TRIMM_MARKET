@@ -8,7 +8,6 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import AuthProvider from "context/auth.ctx";
 import ChatDataContextProvider from "context/chatData.ctx";
 import ChatListProvider from "context/chatList.ctx";
-import { Suspense } from "react";
 
 const queryClient = new QueryClient();
 
@@ -21,9 +20,7 @@ function App() {
 						<ChatDataContextProvider>
 							<ChatListProvider>
 								<GlobalStyles />
-								<Suspense fallback={<div>Loading...</div>}>
-									<RouterProvider router={router} />
-								</Suspense>
+								<RouterProvider router={router} />
 							</ChatListProvider>
 						</ChatDataContextProvider>
 					</QueryClientProvider>
