@@ -20,7 +20,7 @@ const TransactionHistory = ({ MyuserList, formatNumber }) => {
 				{MyuserList.map(product => (
 					<S.ProductContainer key={product?.Product.idx}>
 						<div>
-							<img src={product?.Product.img_url} />
+							<img src={product?.Product.img_url} alt="거래 상품" />
 						</div>
 						<S.MasterWrapper>
 							<div>

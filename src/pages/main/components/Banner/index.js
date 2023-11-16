@@ -31,7 +31,7 @@ const Banner = () => {
 						className="banner-img"
 						onClick={() => navigate(`search/${route[i]}`)}
 					>
-						<img src={image} style={{ width: "100%" }} />
+						<img src={image} style={{ width: "100%" }} alt="배너 이미지" />
 					</SwiperSlide>
 				))}
 			</Swiper>

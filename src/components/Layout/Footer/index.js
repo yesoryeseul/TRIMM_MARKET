@@ -33,13 +33,13 @@ const Footer = () => {
 				<S.FooterRight>
 					<S.Icons>
 						<S.Icon>
-							<img src={iconFace} />
+							<img src={iconFace} alt="facebook" />
 						</S.Icon>
 						<S.Icon>
-							<img src={iconInsta} />
+							<img src={iconInsta} alt="instagram" />
 						</S.Icon>
 						<S.Icon>
-							<img src={iconGit} />
+							<img src={iconGit} alt="git" />
 						</S.Icon>
 					</S.Icons>
 					<S.CSBox>

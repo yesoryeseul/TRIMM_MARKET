@@ -139,6 +139,7 @@ const AccountPrivacy = () => {
 							<S.ProfileImg>
 								<img
 									src={userData.profile_url ? userData.profile_url : imageSrc}
+									alt="프로필 이미지"
 								/>
 							</S.ProfileImg>
 							<S.ProfileIntroductionContainer>
@@ -156,12 +157,14 @@ const AccountPrivacy = () => {
 										color={"darkBlack"}
 										children={"이미지 변경"}
 										onClick={handleUploadClick}
+										aria-label={"이미지 변경"}
 									/>
 									<BasicButton
 										size={"xxmedium"}
 										color={"darkBlack"}
 										children={"이미지 삭제"}
 										onClick={handleDeleteImage}
+										aria-label={"이미지 삭제"}
 									/>
 								</S.ProfileImgBtnContainer>
 							</S.ProfileIntroductionContainer>
@@ -204,6 +207,7 @@ const AccountPrivacy = () => {
 								children={"변경사항 저장"}
 								style={{ padding: "20px" }}
 								onClick={handleSave}
+								aria-label={"변경사항 저장"}
 								// disabled={!emailValue && !phoneValue && !regionValue && !nickNameValue}
 							/>
 						</S.ButtonWrapper>

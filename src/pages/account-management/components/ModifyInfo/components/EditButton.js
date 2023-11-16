@@ -8,6 +8,7 @@ const EditCompleteBtn = ({ handleSave }) => {
 			children={"변경사항 저장"}
 			style={{ marginTop: "60px", marginLeft: "400px" }}
 			onClick={handleSave}
+			aria-label={"변경사항 저장"}
 			// disabled={!emailValue && !phoneValue && !regionValue && !nickNameValue}
 		/>
 	);

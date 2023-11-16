@@ -60,7 +60,7 @@ const MiniNav = () => {
 	return (
 		<>
 			<S.NavIcon open={openIcon} onClick={isOpenNav}>
-				<img src="/img/햄버거버튼.png" />
+				<img src="/img/햄버거버튼.png" alt="내비게이션 바 버튼" />
 			</S.NavIcon>
 			<S.Wrapper open={openNav}>
 				<S.Container>
@@ -72,7 +72,7 @@ const MiniNav = () => {
 								마이페이지
 							</S.NavMyPageTitle>
 							<div onClick={isCloseNav}>
-								<img src="/img/뒤로가기버튼.png" />
+								<img src="/img/뒤로가기버튼.png" alt="뒤로가기 버튼" />
 							</div>
 						</S.TitleWrapper>
 						<div onClick={() => handleClick("/mypage/0")}>등록 물품</div>

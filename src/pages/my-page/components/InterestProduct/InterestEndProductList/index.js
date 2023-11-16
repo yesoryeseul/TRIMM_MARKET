@@ -12,7 +12,7 @@ const InterestEndProductList = ({ product, formatNumber }) => {
 	return (
 		<S.Container>
 			<S.ProductContainer key={product.idx}>
-				<img src={product.img_url} />
+				<img src={product.img_url} alt="판매상품" />
 				<div>
 					<div>
 						<S.Wrapper>

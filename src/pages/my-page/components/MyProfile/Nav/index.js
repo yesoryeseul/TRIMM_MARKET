@@ -45,7 +45,7 @@ const Nav = () => {
 	return (
 		<div>
 			<S.NavIcon>
-				<img src="/img/햄버거버튼.png" />
+				<img src="/img/햄버거버튼.png" alt="내비게이션 바 버튼" />
 			</S.NavIcon>
 			<S.MyPageNavWrapper>
 				<S.NavMyPageTitle onClick={() => handleNavigateClick("/mypage")}>

@@ -116,7 +116,7 @@ const Review = ({ productIndex, reviewData }) => {
 			{completeOpen && <AlertModal message={"등록이 완료되었습니다."} />}
 			<div>
 				<S.ImgWrapper>
-					<img src={PayProductList[0].Product.img_url} />
+					<img src={PayProductList[0].Product.img_url} alt="리뷰 상품" />
 				</S.ImgWrapper>
 				<S.Title>{PayProductList[0].Product.title}</S.Title>
 			</div>

@@ -13,6 +13,7 @@ const SearchModal = ({
 				<S.ModalSearchicon
 					src={search}
 					onClick={handleSearchResult}
+					alt="modal search icon"
 				></S.ModalSearchicon>
 			</S.Form>
 			<S.CloseButton onClick={() => setIsOpen(false)}>x</S.CloseButton>

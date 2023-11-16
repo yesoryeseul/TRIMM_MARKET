@@ -86,7 +86,7 @@ const PurchasedItem = () => {
 								</S.RowBox>
 								<DivisionLine2 />
 								<S.RowBox>
-									<img src={product?.Product.img_url} />
+									<img src={product?.Product.img_url} alt="구매한 상품" />
 									{product?.Review?.idx ? (
 										<BasicButton
 											color={"white"}

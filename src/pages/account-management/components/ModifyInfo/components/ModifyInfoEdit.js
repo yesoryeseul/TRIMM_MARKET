@@ -153,6 +153,7 @@ const ModifyInfoEdit = ({ userData, field, setFieldValue, setUncomplete }) => {
 
 						<BasicButton
 							size={"account"}
+							aria-label={"변경"}
 							color={"darkBlack"}
 							children={"변경"}
 							onClick={() => {
@@ -191,6 +192,7 @@ const ModifyInfoEdit = ({ userData, field, setFieldValue, setUncomplete }) => {
 										size={"account"}
 										color={"darkBlack"}
 										children={"취소"}
+										aria-label={"취소"}
 										style={{ marginLeft: "5px", marginBottom: "5px" }}
 										onClick={() => {
 											handleEdit("취소");
@@ -200,6 +202,7 @@ const ModifyInfoEdit = ({ userData, field, setFieldValue, setUncomplete }) => {
 										size={"account"}
 										color={"darkBlack"}
 										children={"중복 확인"}
+										aria-label={"중복 확인"}
 										onClick={onEmailCheck}
 										style={{ marginLeft: "5px", marginBottom: "5px" }}
 										disabled={errors[field] || !getValues("email")}
@@ -208,6 +211,7 @@ const ModifyInfoEdit = ({ userData, field, setFieldValue, setUncomplete }) => {
 										size={"account"}
 										color={"darkBlack"}
 										children={"완료"}
+										aria-label={"완료"}
 										style={{ marginLeft: "5px" }}
 										onClick={() => {
 											handleEdit("완료");
@@ -231,6 +235,7 @@ const ModifyInfoEdit = ({ userData, field, setFieldValue, setUncomplete }) => {
 										size={"account"}
 										color={"darkBlack"}
 										children={"중복 확인"}
+										aria-label={"중복 확인"}
 										style={{ marginLeft: "5px", marginBottom: "5px" }}
 										onClick={onNickNameCheck}
 										disabled={errors[field] || !getValues("nickName")}
@@ -239,6 +244,7 @@ const ModifyInfoEdit = ({ userData, field, setFieldValue, setUncomplete }) => {
 										size={"account"}
 										color={"darkBlack"}
 										children={"완료"}
+										aria-label={"완료"}
 										style={{ marginLeft: "5px", marginBottom: "5px" }}
 										onClick={() => {
 											handleEdit("완료");
@@ -252,6 +258,7 @@ const ModifyInfoEdit = ({ userData, field, setFieldValue, setUncomplete }) => {
 										size={"account"}
 										color={"darkBlack"}
 										children={"변경"}
+										aria-label={"변경"}
 										style={{ marginLeft: "5px", marginBottom: "5px" }}
 										onClick={() => {
 											handleEdit("변경");
@@ -268,6 +275,7 @@ const ModifyInfoEdit = ({ userData, field, setFieldValue, setUncomplete }) => {
 										size={"account"}
 										color={"darkBlack"}
 										children={"완료"}
+										aria-label={"완료"}
 										style={{ marginLeft: "5px" }}
 										onClick={() => {
 											handleEdit("완료");

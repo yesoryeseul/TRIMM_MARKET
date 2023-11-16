@@ -69,6 +69,7 @@ const PwChange = () => {
 						size={"medium"}
 						color={"darkBlack"}
 						children={"변경사항 저장"}
+						aria-label={"변경사항 저장"}
 						type={"submit"}
 						style={{
 							width: "100%",

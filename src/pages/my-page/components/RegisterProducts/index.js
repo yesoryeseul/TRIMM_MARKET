@@ -111,7 +111,7 @@ const RegisterProduct = () => {
 								<S.PContainer>
 									<S.ProductContainer key={product.idx}>
 										<div>
-											<img src={product.img_url} />
+											<img src={product.img_url} alt="등록 상품" />
 										</div>
 										<S.MasterWrapper>
 											<div>

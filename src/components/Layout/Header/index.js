@@ -107,6 +107,7 @@ const Header = ({ socket }) => {
 							<S.Searchicon
 								src={search}
 								onClick={handleSearchResult}
+								alt="search_icon"
 							></S.Searchicon>
 						</form>
 					</S.SearchWrapper>
@@ -117,6 +118,7 @@ const Header = ({ socket }) => {
 							<S.MediaSearchIcon
 								src={search}
 								onClick={(handleSearchResult, closeModal)}
+								alt="search_icon"
 							></S.MediaSearchIcon>
 							{accessToken ? (
 								<div style={{ cursor: "pointer" }} onClick={handleLogout}>
@@ -149,7 +151,7 @@ const Header = ({ socket }) => {
 								}}
 							>
 								CHAT
-								<S.Chaticon src={chat}></S.Chaticon>
+								<S.Chaticon src={chat} alt="chat"></S.Chaticon>
 							</div>
 						</S.InfoWrapper>
 					</div>
