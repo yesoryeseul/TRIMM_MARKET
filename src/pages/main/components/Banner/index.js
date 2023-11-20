@@ -1,7 +1,7 @@
-import FAKEIMG from "./images/banner.jpg";
-import FAKEIMG2 from "./images/banner2.jpg";
-import FAKEIMG3 from "./images/banner3.jpg";
-import FAKEIMG4 from "./images/banner4.jpg";
+import FAKEIMG from "./images/banner.webp";
+import FAKEIMG2 from "./images/banner2.webp";
+import FAKEIMG3 from "./images/banner3.webp";
+import FAKEIMG4 from "./images/banner4.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
